@@ -1,4 +1,4 @@
-C:\HOPE AI\AI Course Tamil\Smart-EMI-Collection-Flask-Completefrom pathlib import Path
+from pathlib import Path
 import pickle
 
 import pandas as pd
