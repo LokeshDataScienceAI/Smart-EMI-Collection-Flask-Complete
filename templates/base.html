@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ title or "Smart EMI Collection" }}</title>
+
+    <meta name="description"
+          content="Smart EMI Collection Prioritization System">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script defer
+            src="{{ url_for('static', filename='js/script.js') }}">
+    </script>
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">₹</div>
+
+            <div>
+                <div class="brand-title">EMI SMART</div>
+                <div class="brand-subtitle">Collection Hub</div>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="/dashboard"
+               class="nav-link {% if request.path == '/dashboard' %}active{% endif %}">
+                <span>▦</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="/prediction"
+               class="nav-link {% if request.path == '/prediction' %}active{% endif %}">
+                <span>◉</span>
+                <span>Risk Prediction</span>
+            </a>
+
+            <a href="/analytics"
+               class="nav-link {% if request.path == '/analytics' %}active{% endif %}">
+                <span>◒</span>
+                <span>Analytics</span>
+            </a>
+
+            <a href="/about"
+               class="nav-link {% if request.path == '/about' %}active{% endif %}">
+                <span>ⓘ</span>
+                <span>About Project</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="avatar">LR</div>
+
+            <div>
+                <strong>Lokeshwaran R</strong>
+                <span>ML Project</span>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <div class="top-eyebrow">
+                    AI / ML POWERED BANKING APPLICATION
+                </div>
+
+                <h1>{{ title or "Smart EMI Collection" }}</h1>
+
+            </div>
+
+
+            <div class="top-status">
+                <span class="online-dot"></span>
+                Model Ready
+            </div>
+
+        </header>
+
+
+        <div class="content-area">
+
+            {% block content %}{% endblock %}
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

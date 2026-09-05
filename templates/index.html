@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero-section">
+
+    <div class="hero-content">
+
+        <div class="hero-pill">
+            SMART COLLECTION INTELLIGENCE
+        </div>
+
+        <h2>
+            Predict EMI payment risk
+            <span>and prioritize collections.</span>
+        </h2>
+
+        <p>
+            A modern Flask web application built around your
+            existing Machine Learning model and CIBIL-based
+            risk classification logic.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="/prediction"
+               class="btn btn-primary">
+                Start Prediction →
+            </a>
+
+            <a href="/dashboard"
+               class="btn btn-secondary">
+                View Dashboard
+            </a>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+            <div>
+                <strong>9</strong>
+                <span>Input Features</span>
+            </div>
+
+            <div>
+                <strong>3</strong>
+                <span>Risk Levels</span>
+            </div>
+
+            <div>
+                <strong>1</strong>
+                <span>Decision Tree Model</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="visual-header">
+
+            <span>RISK MONITOR</span>
+
+            <span class="green-text">
+                ● LIVE
+            </span>
+
+        </div>
+
+
+        <div class="risk-circle">
+
+            <div class="risk-inner">
+
+                <span>AI</span>
+
+                <strong>RISK</strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="visual-grid">
+
+            <div>
+                <span>Framework</span>
+                <strong>Flask</strong>
+            </div>
+
+            <div>
+                <span>Model</span>
+                <strong>Decision Tree</strong>
+            </div>
+
+            <div>
+                <span>Frontend</span>
+                <strong>HTML/CSS</strong>
+            </div>
+
+            <div>
+                <span>Deployment</span>
+                <strong>Render</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="feature-grid">
+
+    <article class="feature-card">
+
+        <div class="feature-number">01</div>
+
+        <h3>Risk Prediction</h3>
+
+        <p>
+            Collect customer and EMI information and generate
+            a structured risk assessment.
+        </p>
+
+    </article>
+
+
+    <article class="feature-card">
+
+        <div class="feature-number">02</div>
+
+        <h3>Collection Priority</h3>
+
+        <p>
+            Convert the final risk category into Priority 1,
+            Priority 2, or Priority 3.
+        </p>
+
+    </article>
+
+
+    <article class="feature-card">
+
+        <div class="feature-number">03</div>
+
+        <h3>Action Recommendations</h3>
+
+        <p>
+            Present simple collection actions that make the
+            prediction useful for a banking workflow.
+        </p>
+
+    </article>
+
+</section>
+
+
+<section class="section-card">
+
+    <div class="section-header">
+
+        <div>
+
+            <div class="top-eyebrow">
+                END-TO-END PROJECT
+            </div>
+
+            <h3>
+                Jupyter Notebook → Flask → Render
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <div class="workflow">
+
+        <div class="workflow-step">
+            <span>1</span>
+            <strong>Dataset</strong>
+        </div>
+
+        <div class="workflow-arrow">→</div>
+
+        <div class="workflow-step">
+            <span>2</span>
+            <strong>Preprocessing</strong>
+        </div>
+
+        <div class="workflow-arrow">→</div>
+
+        <div class="workflow-step">
+            <span>3</span>
+            <strong>ML Model</strong>
+        </div>
+
+        <div class="workflow-arrow">→</div>
+
+        <div class="workflow-step">
+            <span>4</span>
+            <strong>Flask UI</strong>
+        </div>
+
+        <div class="workflow-arrow">→</div>
+
+        <div class="workflow-step">
+            <span>5</span>
+            <strong>Render</strong>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

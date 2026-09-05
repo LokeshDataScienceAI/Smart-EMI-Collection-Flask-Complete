@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-heading">
+
+    <div>
+
+        <div class="top-eyebrow">
+            COLLECTION OVERVIEW
+        </div>
+
+        <h2>Smart EMI Dashboard</h2>
+
+        <p>
+            A clean executive view of the model, inputs, and
+            collection-prioritization workflow.
+        </p>
+
+    </div>
+
+
+    <a href="/prediction"
+       class="btn btn-primary">
+        + New Prediction
+    </a>
+
+</div>
+
+
+<div class="kpi-grid">
+
+    <div class="kpi-card">
+        <span>Input Features</span>
+        <strong>09</strong>
+        <small>Customer + EMI attributes</small>
+    </div>
+
+    <div class="kpi-card danger-card">
+        <span>High Risk</span>
+        <strong>P1</strong>
+        <small>Immediate collection</small>
+    </div>
+
+    <div class="kpi-card warning-card">
+        <span>Medium Risk</span>
+        <strong>P2</strong>
+        <small>Scheduled follow-up</small>
+    </div>
+
+    <div class="kpi-card success-card">
+        <span>Low Risk</span>
+        <strong>P3</strong>
+        <small>Routine monitoring</small>
+    </div>
+
+    <div class="kpi-card">
+        <span>ML Model</span>
+        <strong>DT</strong>
+        <small>Decision Tree Classifier</small>
+    </div>
+
+</div>
+
+
+<div class="dashboard-two-column">
+
+    <section class="section-card">
+
+        <div class="section-header">
+
+            <h3>Risk Classification</h3>
+
+            <span class="mini-badge">
+                Model + CIBIL
+            </span>
+
+        </div>
+
+
+        <div class="risk-row high-row">
+
+            <div>
+                <strong>High Risk</strong>
+                <span>CIBIL score ≤ 500 (business indicator)</span>
+            </div>
+
+            <b>Priority 1</b>
+
+        </div>
+
+
+        <div class="risk-row medium-row">
+
+            <div>
+                <strong>Medium Risk</strong>
+                <span>CIBIL score 501–650 (business indicator)</span>
+            </div>
+
+            <b>Priority 2</b>
+
+        </div>
+
+
+        <div class="risk-row low-row">
+
+            <div>
+                <strong>Low Risk</strong>
+                <span>CIBIL score &gt; 650 (business indicator)</span>
+            </div>
+
+            <b>Priority 3</b>
+
+        </div>
+
+    </section>
+
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Application Stack</h3>
+        </div>
+
+
+        <div class="stack-list">
+
+            <div>
+                <span>Development</span>
+                <strong>VS Code</strong>
+            </div>
+
+            <div>
+                <span>ML</span>
+                <strong>scikit-learn</strong>
+            </div>
+
+            <div>
+                <span>Backend</span>
+                <strong>Flask</strong>
+            </div>
+
+            <div>
+                <span>Frontend</span>
+                <strong>HTML + CSS + JavaScript</strong>
+            </div>
+
+            <div>
+                <span>Deployment</span>
+                <strong>Render</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<section class="section-card">
+
+    <div class="section-header">
+        <h3>Business Flow</h3>
+    </div>
+
+
+    <div class="business-flow">
+
+        <div class="business-step">
+            <span>01</span>
+            Customer Details
+        </div>
+
+        <div>→</div>
+
+        <div class="business-step">
+            <span>02</span>
+            Model Input
+        </div>
+
+        <div>→</div>
+
+        <div class="business-step">
+            <span>03</span>
+            Risk Category
+        </div>
+
+        <div>→</div>
+
+        <div class="business-step">
+            <span>04</span>
+            Collection Priority
+        </div>
+
+        <div>→</div>
+
+        <div class="business-step">
+            <span>05</span>
+            Action
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

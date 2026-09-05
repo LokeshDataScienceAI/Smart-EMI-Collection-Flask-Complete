@@ -1,0 +1,40 @@
+{
+  "project": "Smart EMI Collection Prioritization System",
+  "backend": "Flask",
+  "model": "DecisionTreeClassifier",
+  "model_bundle": "model/emi_collection_model.pkl",
+  "primary_risk_source": "saved risk_map",
+  "saved_risk_map": {
+    "0": "Low Risk",
+    "1": "Medium Risk",
+    "2": "High Risk"
+  },
+  "cibil_business_indicator": {
+    "score <= 500": "High Risk",
+    "501 <= score <= 650": "Medium Risk",
+    "score > 650": "Low Risk"
+  },
+  "training_categories": {
+    "Account_Type": [
+      "Credit",
+      "Current",
+      "Savings"
+    ],
+    "Loan_Type": [
+      "Car Loan",
+      "Home Loan",
+      "Personal Loan"
+    ],
+    "Payment_Status": [
+      "Paid",
+      "Partially Paid",
+      "Missed"
+    ],
+    "Region": [
+      "East",
+      "North",
+      "South",
+      "West"
+    ]
+  }
+}

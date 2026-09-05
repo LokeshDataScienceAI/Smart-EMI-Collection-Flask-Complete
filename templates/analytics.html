@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-heading">
+
+    <div>
+
+        <div class="top-eyebrow">
+            ANALYTICS
+        </div>
+
+        <h2>Risk & Collection Intelligence</h2>
+
+        <p>
+            Visual explanation of how the application turns
+            customer inputs into collection priorities.
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="analytics-grid">
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Risk Levels</h3>
+        </div>
+
+        <div class="analytics-bars">
+
+            <div class="analytics-bar">
+
+                <div>
+                    <span>High Risk</span>
+                    <strong>Score ≤ 500</strong>
+                </div>
+
+                <div class="bar-track">
+                    <div class="bar high-bar"
+                         style="width: 56%">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="analytics-bar">
+
+                <div>
+                    <span>Medium Risk</span>
+                    <strong>501–650</strong>
+                </div>
+
+                <div class="bar-track">
+                    <div class="bar medium-bar"
+                         style="width: 74%">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="analytics-bar">
+
+                <div>
+                    <span>Low Risk</span>
+                    <strong>&gt; 650</strong>
+                </div>
+
+                <div class="bar-track">
+                    <div class="bar low-bar"
+                         style="width: 92%">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Model Input Features</h3>
+        </div>
+
+        <div class="feature-tags">
+
+            <span>Account Type</span>
+            <span>Loan Type</span>
+            <span>Loan Amount</span>
+            <span>Outstanding Amount</span>
+            <span>EMI Amount</span>
+            <span>Payment Status</span>
+            <span>Payment Delay Days</span>
+            <span>Region</span>
+            <span>Customer Score</span>
+
+        </div>
+
+    </section>
+
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Priority Matrix</h3>
+        </div>
+
+        <div class="priority-matrix">
+
+            <div class="priority-card p1">
+                <span>P1</span>
+                <strong>Immediate</strong>
+                <small>High Risk</small>
+            </div>
+
+            <div class="priority-card p2">
+                <span>P2</span>
+                <strong>Scheduled</strong>
+                <small>Medium Risk</small>
+            </div>
+
+            <div class="priority-card p3">
+                <span>P3</span>
+                <strong>Routine</strong>
+                <small>Low Risk</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Deployment Architecture</h3>
+        </div>
+
+        <div class="architecture">
+
+            <div>VS Code</div>
+            <span>↓</span>
+            <div>Flask</div>
+            <span>↓</span>
+            <div>Trained Model</div>
+            <span>↓</span>
+            <div>GitHub</div>
+            <span>↓</span>
+            <div>Render</div>
+
+        </div>
+
+    </section>
+
+</div>
+
+{% endblock %}

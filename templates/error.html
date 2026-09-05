@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="section-card error-page">
+
+    <div class="error-icon">!</div>
+
+    <h2>Something went wrong</h2>
+
+    <p>{{ message }}</p>
+
+    <a href="/prediction"
+       class="btn btn-primary">
+        Return to Prediction
+    </a>
+
+</section>
+
+{% endblock %}

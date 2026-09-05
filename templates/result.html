@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-heading">
+
+    <div>
+
+        <div class="top-eyebrow">
+            PREDICTION COMPLETE
+        </div>
+
+        <h2>AI Prediction Result</h2>
+
+        <p>
+            The Decision Tree model produced the final ML risk.
+            Your existing CIBIL rule is shown as a supporting indicator.
+        </p>
+
+    </div>
+
+
+    <a href="/prediction"
+       class="btn btn-secondary">
+        ← New Prediction
+    </a>
+
+</div>
+
+
+<section class="result-banner
+    {% if risk == 'High Risk' %}
+        result-high
+    {% elif risk == 'Medium Risk' %}
+        result-medium
+    {% else %}
+        result-low
+    {% endif %}
+">
+
+    <div>
+
+        <span class="result-label">
+            FINAL RISK LEVEL
+        </span>
+
+        <h2>{{ risk }}</h2>
+
+        <p>
+            Recommended collection priority:
+            <strong>Priority {{ priority }}</strong>
+        </p>
+
+    </div>
+
+
+    <div class="priority-badge">
+        P{{ priority }}
+    </div>
+
+</section>
+
+
+<div class="result-grid">
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Prediction Summary</h3>
+        </div>
+
+
+        <div class="metric-grid">
+
+            <div class="metric-card">
+                <span>Raw Model Class</span>
+                <strong>{{ raw_prediction }}</strong>
+            </div>
+
+            <div class="metric-card">
+                <span>Model Confidence</span>
+
+                <strong>
+                    {% if confidence is not none %}
+                        {{ confidence }}%
+                    {% else %}
+                        N/A
+                    {% endif %}
+                </strong>
+
+            </div>
+
+            <div class="metric-card">
+                <span>CIBIL Score</span>
+                <strong>{{ customer_score }}</strong>
+            </div>
+
+            <div class="metric-card">
+                <span>CIBIL Category</span>
+                <strong>{{ cibil_category }}</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Risk Decision</h3>
+        </div>
+
+
+        <div class="decision-box">
+
+            <div>
+                <span>High Risk</span>
+                <strong>≤ 500</strong>
+            </div>
+
+            <div>
+                <span>Medium Risk</span>
+                <strong>501 – 650</strong>
+            </div>
+
+            <div>
+                <span>Low Risk</span>
+                <strong>&gt; 650</strong>
+            </div>
+
+        </div>
+
+
+        <div class="selected-rule">
+            <strong>ML Risk:</strong> {{ risk }}.
+            <br>
+            <strong>CIBIL Category:</strong> {{ cibil_category }}.
+            The two values are intentionally displayed separately.
+        </div>
+
+    </section>
+
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Recommended Collection Action</h3>
+        </div>
+
+
+        <div class="recommendation-list">
+
+            {% for item in recommendations %}
+
+            <div class="recommendation-item">
+
+                <span>✓</span>
+
+                {{ item }}
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Submitted Customer Details</h3>
+        </div>
+
+
+        <div class="detail-list">
+
+            <div>
+                <span>Account Type</span>
+                <strong>{{ account_type }}</strong>
+            </div>
+
+            <div>
+                <span>Loan Type</span>
+                <strong>{{ loan_type }}</strong>
+            </div>
+
+            <div>
+                <span>Loan Amount</span>
+                <strong>₹ {{ "{:,.2f}".format(loan_amount) }}</strong>
+            </div>
+
+            <div>
+                <span>Outstanding Amount</span>
+                <strong>₹ {{ "{:,.2f}".format(outstanding_amount) }}</strong>
+            </div>
+
+            <div>
+                <span>EMI Amount</span>
+                <strong>₹ {{ "{:,.2f}".format(emi_amount) }}</strong>
+            </div>
+
+            <div>
+                <span>Payment Status</span>
+                <strong>{{ payment_status }}</strong>
+            </div>
+
+            <div>
+                <span>Payment Delay</span>
+                <strong>{{ payment_delay_days }} days</strong>
+            </div>
+
+            <div>
+                <span>Region</span>
+                <strong>{{ region }}</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<section class="section-card mentor-note">
+
+    <div class="note-icon">i</div>
+
+    <div>
+        <h3>Project note</h3>
+
+        <p>
+            Your uploaded model contains a saved risk mapping, so this
+            Flask deployment uses that mapping for the primary ML result.
+            Your Streamlit application's CIBIL thresholds remain visible
+            as a separate business indicator.
+        </p>
+    </div>
+
+</section>
+
+{% endblock %}

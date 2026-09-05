@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-heading">
+
+    <div>
+
+        <div class="top-eyebrow">
+            PROJECT DOCUMENTATION
+        </div>
+
+        <h2>Smart EMI Collection Prioritization System</h2>
+
+        <p>
+            Mentor-ready explanation of the machine-learning
+            application and deployment architecture.
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="about-grid">
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Project Objective</h3>
+        </div>
+
+        <p class="large-text">
+            The objective is to support EMI collection teams by
+            classifying customer payment risk and converting that
+            classification into an actionable collection priority.
+        </p>
+
+    </section>
+
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Machine Learning Model</h3>
+        </div>
+
+        <div class="model-summary">
+
+            <div>
+                <span>Algorithm</span>
+                <strong>Decision Tree Classifier</strong>
+            </div>
+
+            <div>
+                <span>Input Features</span>
+                <strong>9</strong>
+            </div>
+
+            <div>
+                <span>Saved File</span>
+                <strong>emi_collection_model.pkl</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section-card full">
+
+        <div class="section-header">
+            <h3>End-to-End Workflow</h3>
+        </div>
+
+
+        <div class="timeline">
+
+            <div>
+                <span>01</span>
+                <strong>Data Collection</strong>
+                <small>Banking collections dataset</small>
+            </div>
+
+            <div>
+                <span>02</span>
+                <strong>Data Preprocessing</strong>
+                <small>Encoding and feature preparation</small>
+            </div>
+
+            <div>
+                <span>03</span>
+                <strong>Model Building</strong>
+                <small>Decision Tree training</small>
+            </div>
+
+            <div>
+                <span>04</span>
+                <strong>Model Saving</strong>
+                <small>Pickle model bundle</small>
+            </div>
+
+            <div>
+                <span>05</span>
+                <strong>Flask Application</strong>
+                <small>HTML + CSS + JavaScript</small>
+            </div>
+
+            <div>
+                <span>06</span>
+                <strong>Deployment</strong>
+                <small>GitHub + Render</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Recommended Project Presentation</h3>
+        </div>
+
+        <ol class="presentation-list">
+            <li>Explain the business problem.</li>
+            <li>Show the dataset and input features.</li>
+            <li>Explain preprocessing and model training.</li>
+            <li>Show the final model file.</li>
+            <li>Open the Flask prediction page.</li>
+            <li>Run a sample prediction.</li>
+            <li>Explain risk and collection priority.</li>
+            <li>Show GitHub and Render deployment.</li>
+        </ol>
+
+    </section>
+
+
+    <section class="section-card">
+
+        <div class="section-header">
+            <h3>Technology Stack</h3>
+        </div>
+
+        <div class="tech-grid">
+
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>scikit-learn</span>
+            <span>Flask</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>GitHub</span>
+            <span>Render</span>
+
+        </div>
+
+    </section>
+
+</div>
+
+{% endblock %}
